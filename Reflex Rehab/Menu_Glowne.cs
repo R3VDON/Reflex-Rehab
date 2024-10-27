@@ -17,9 +17,16 @@ namespace Reflex_Rehab
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Menu_Glowne_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Poziom_Trudnosci poziom_Trudnosci = new Poziom_Trudnosci();
+            poziom_Trudnosci.Show();
         }
     }
 }
