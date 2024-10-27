@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Poziom_Trudnosci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Poziom_Trudnosci.Designer.cs">
+      <DependentUpon>Poziom_Trudnosci.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu_Glowne.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -56,6 +62,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Menu_Glowne.resx">
       <DependentUpon>Menu_Glowne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Poziom_Trudnosci.resx">
+      <DependentUpon>Poziom_Trudnosci.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
