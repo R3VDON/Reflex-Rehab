@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Poziom_Latwy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Poziom_Latwy.Designer.cs">
+      <DependentUpon>Poziom_Latwy.cs</DependentUpon>
+    </Compile>
     <Compile Include="Poziom_Trudnosci.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Ekran_Glowny.resx">
       <DependentUpon>Ekran_Glowny.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Poziom_Latwy.resx">
+      <DependentUpon>Poziom_Latwy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Poziom_Trudnosci.resx">
       <DependentUpon>Poziom_Trudnosci.cs</DependentUpon>
