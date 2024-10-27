@@ -35,9 +35,11 @@
             this.panelDifficultySelectionMenu = new System.Windows.Forms.Panel();
             this.panelMainMenuButtons = new System.Windows.Forms.Panel();
             this.panelMainMenuHeader = new System.Windows.Forms.Panel();
+            this.panelGame = new System.Windows.Forms.Panel();
             this.panelMainMenu.SuspendLayout();
             this.panelDifficultySelectionMenu.SuspendLayout();
             this.panelMainMenuButtons.SuspendLayout();
+            this.panelMainMenuHeader.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnStartGame
@@ -56,7 +58,7 @@
             this.btnStartGame.Text = "Rozpocznij Grę";
             this.btnStartGame.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStartGame.UseVisualStyleBackColor = false;
-            this.btnStartGame.Click += new System.EventHandler(this.BtnStartGame_Click);
+            this.btnStartGame.Click += new System.EventHandler(this.btnStartGame_Click);
             // 
             // btnExit
             // 
@@ -74,7 +76,7 @@
             this.btnExit.Text = "Wyjdź";
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnHelp
             // 
@@ -114,12 +116,11 @@
             // btnBackToMainMenu
             // 
             this.btnBackToMainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.btnBackToMainMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBackToMainMenu.FlatAppearance.BorderSize = 0;
             this.btnBackToMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBackToMainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnBackToMainMenu.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnBackToMainMenu.Location = new System.Drawing.Point(0, 0);
+            this.btnBackToMainMenu.Location = new System.Drawing.Point(0, 300);
             this.btnBackToMainMenu.Margin = new System.Windows.Forms.Padding(0);
             this.btnBackToMainMenu.Name = "btnBackToMainMenu";
             this.btnBackToMainMenu.Size = new System.Drawing.Size(250, 100);
@@ -131,10 +132,20 @@
             // 
             // btnEasy
             // 
+            this.btnEasy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            this.btnEasy.FlatAppearance.BorderSize = 0;
+            this.btnEasy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEasy.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnEasy.ForeColor = System.Drawing.SystemColors.Control;
             this.btnEasy.Location = new System.Drawing.Point(0, 0);
+            this.btnEasy.Margin = new System.Windows.Forms.Padding(0);
             this.btnEasy.Name = "btnEasy";
             this.btnEasy.Size = new System.Drawing.Size(250, 100);
             this.btnEasy.TabIndex = 1;
+            this.btnEasy.Text = "Łatwy";
+            this.btnEasy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEasy.UseVisualStyleBackColor = false;
+            this.btnEasy.Click += new System.EventHandler(this.btnEasy_Click);
             // 
             // btnMedium
             // 
@@ -153,8 +164,8 @@
             // panelMainMenu
             // 
             this.panelMainMenu.BackColor = System.Drawing.Color.Transparent;
-            this.panelMainMenu.Controls.Add(this.panelMainMenuButtons);
             this.panelMainMenu.Controls.Add(this.panelDifficultySelectionMenu);
+            this.panelMainMenu.Controls.Add(this.panelMainMenuButtons);
             this.panelMainMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMainMenu.Location = new System.Drawing.Point(0, 200);
             this.panelMainMenu.Name = "panelMainMenu";
@@ -164,6 +175,7 @@
             // panelDifficultySelectionMenu
             // 
             this.panelDifficultySelectionMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            this.panelDifficultySelectionMenu.Controls.Add(this.btnEasy);
             this.panelDifficultySelectionMenu.Controls.Add(this.btnBackToMainMenu);
             this.panelDifficultySelectionMenu.Location = new System.Drawing.Point(0, 0);
             this.panelDifficultySelectionMenu.Name = "panelDifficultySelectionMenu";
@@ -187,11 +199,19 @@
             // panelMainMenuHeader
             // 
             this.panelMainMenuHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.panelMainMenuHeader.Controls.Add(this.panelGame);
             this.panelMainMenuHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMainMenuHeader.Location = new System.Drawing.Point(0, 0);
             this.panelMainMenuHeader.Name = "panelMainMenuHeader";
             this.panelMainMenuHeader.Size = new System.Drawing.Size(1264, 200);
             this.panelMainMenuHeader.TabIndex = 2;
+            // 
+            // panelGame
+            // 
+            this.panelGame.Location = new System.Drawing.Point(0, 0);
+            this.panelGame.Name = "panelGame";
+            this.panelGame.Size = new System.Drawing.Size(1264, 985);
+            this.panelGame.TabIndex = 3;
             // 
             // Ekran_Glowny
             // 
@@ -209,6 +229,7 @@
             this.panelMainMenu.ResumeLayout(false);
             this.panelDifficultySelectionMenu.ResumeLayout(false);
             this.panelMainMenuButtons.ResumeLayout(false);
+            this.panelMainMenuHeader.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -227,6 +248,7 @@
         private System.Windows.Forms.Panel panelMainMenuHeader;
         private System.Windows.Forms.Panel panelMainMenuButtons;
         private System.Windows.Forms.Panel panelDifficultySelectionMenu;
+        private System.Windows.Forms.Panel panelGame;
     }
 }
 
