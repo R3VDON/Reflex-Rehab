@@ -32,12 +32,12 @@
             this.btnMedium = new System.Windows.Forms.Button();
             this.btnHard = new System.Windows.Forms.Button();
             this.panelMainMenu = new System.Windows.Forms.Panel();
-            this.panelMainMenuButtons = new System.Windows.Forms.Panel();
             this.panelDifficultySelectionMenu = new System.Windows.Forms.Panel();
+            this.panelMainMenuButtons = new System.Windows.Forms.Panel();
             this.panelMainMenuHeader = new System.Windows.Forms.Panel();
             this.panelMainMenu.SuspendLayout();
-            this.panelMainMenuButtons.SuspendLayout();
             this.panelDifficultySelectionMenu.SuspendLayout();
+            this.panelMainMenuButtons.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnStartGame
@@ -113,31 +113,42 @@
             // 
             // btnBackToMainMenu
             // 
+            this.btnBackToMainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            this.btnBackToMainMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBackToMainMenu.FlatAppearance.BorderSize = 0;
+            this.btnBackToMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBackToMainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnBackToMainMenu.ForeColor = System.Drawing.SystemColors.Control;
             this.btnBackToMainMenu.Location = new System.Drawing.Point(0, 0);
+            this.btnBackToMainMenu.Margin = new System.Windows.Forms.Padding(0);
             this.btnBackToMainMenu.Name = "btnBackToMainMenu";
-            this.btnBackToMainMenu.Size = new System.Drawing.Size(75, 23);
-            this.btnBackToMainMenu.TabIndex = 0;
+            this.btnBackToMainMenu.Size = new System.Drawing.Size(250, 100);
+            this.btnBackToMainMenu.TabIndex = 4;
+            this.btnBackToMainMenu.Text = "Powrót";
+            this.btnBackToMainMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBackToMainMenu.UseVisualStyleBackColor = false;
+            this.btnBackToMainMenu.Click += new System.EventHandler(this.btnBackToMainMenu_Click);
             // 
             // btnEasy
             // 
             this.btnEasy.Location = new System.Drawing.Point(0, 0);
             this.btnEasy.Name = "btnEasy";
-            this.btnEasy.Size = new System.Drawing.Size(75, 23);
-            this.btnEasy.TabIndex = 0;
+            this.btnEasy.Size = new System.Drawing.Size(250, 100);
+            this.btnEasy.TabIndex = 1;
             // 
             // btnMedium
             // 
-            this.btnMedium.Location = new System.Drawing.Point(0, 0);
+            this.btnMedium.Location = new System.Drawing.Point(0, 100);
             this.btnMedium.Name = "btnMedium";
-            this.btnMedium.Size = new System.Drawing.Size(75, 23);
-            this.btnMedium.TabIndex = 0;
+            this.btnMedium.Size = new System.Drawing.Size(250, 100);
+            this.btnMedium.TabIndex = 2;
             // 
             // btnHard
             // 
-            this.btnHard.Location = new System.Drawing.Point(0, 0);
+            this.btnHard.Location = new System.Drawing.Point(0, 200);
             this.btnHard.Name = "btnHard";
-            this.btnHard.Size = new System.Drawing.Size(75, 23);
-            this.btnHard.TabIndex = 0;
+            this.btnHard.Size = new System.Drawing.Size(250, 100);
+            this.btnHard.TabIndex = 3;
             // 
             // panelMainMenu
             // 
@@ -149,6 +160,16 @@
             this.panelMainMenu.Name = "panelMainMenu";
             this.panelMainMenu.Size = new System.Drawing.Size(250, 785);
             this.panelMainMenu.TabIndex = 2;
+            // 
+            // panelDifficultySelectionMenu
+            // 
+            this.panelDifficultySelectionMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            this.panelDifficultySelectionMenu.Controls.Add(this.btnBackToMainMenu);
+            this.panelDifficultySelectionMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelDifficultySelectionMenu.Name = "panelDifficultySelectionMenu";
+            this.panelDifficultySelectionMenu.Size = new System.Drawing.Size(250, 785);
+            this.panelDifficultySelectionMenu.TabIndex = 6;
+            this.panelDifficultySelectionMenu.Visible = false;
             // 
             // panelMainMenuButtons
             // 
@@ -163,16 +184,6 @@
             this.panelMainMenuButtons.Size = new System.Drawing.Size(250, 785);
             this.panelMainMenuButtons.TabIndex = 5;
             // 
-            // panelDifficultySelectionMenu
-            // 
-            this.panelDifficultySelectionMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.panelDifficultySelectionMenu.Controls.Add(this.btnBackToMainMenu);
-            this.panelDifficultySelectionMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelDifficultySelectionMenu.Name = "panelDifficultySelectionMenu";
-            this.panelDifficultySelectionMenu.Size = new System.Drawing.Size(250, 385);
-            this.panelDifficultySelectionMenu.TabIndex = 6;
-            this.panelDifficultySelectionMenu.Visible = false;
-            // 
             // panelMainMenuHeader
             // 
             this.panelMainMenuHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
@@ -182,7 +193,7 @@
             this.panelMainMenuHeader.Size = new System.Drawing.Size(1264, 200);
             this.panelMainMenuHeader.TabIndex = 2;
             // 
-            // Menu_Glowne
+            // Ekran_Glowny
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -191,13 +202,13 @@
             this.Controls.Add(this.panelMainMenu);
             this.Controls.Add(this.panelMainMenuHeader);
             this.HelpButton = true;
-            this.Name = "Menu_Glowne";
+            this.Name = "Ekran_Glowny";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reflex Rehab";
             this.Load += new System.EventHandler(this.Menu_Glowne_Load);
             this.panelMainMenu.ResumeLayout(false);
-            this.panelMainMenuButtons.ResumeLayout(false);
             this.panelDifficultySelectionMenu.ResumeLayout(false);
+            this.panelMainMenuButtons.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

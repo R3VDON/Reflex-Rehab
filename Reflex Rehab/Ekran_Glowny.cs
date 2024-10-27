@@ -38,5 +38,10 @@ namespace Reflex_Rehab{
         private void btnHelp_Click(object sender, EventArgs e) {
 
         }
+
+        private void btnBackToMainMenu_Click(object sender, EventArgs e) {
+            panelDifficultySelectionMenu.Hide();
+            panelMainMenuButtons.Show();
+        }
     }
 }
