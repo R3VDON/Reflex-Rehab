@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Reflex_Rehab{
-    public partial class Menu_Glowne : Form{
+    public partial class Ekran_Glowny : Form{
         private Button currentBtn;
         private Button previousBtn;
 
-        public Menu_Glowne(){
+        public Ekran_Glowny(){
             InitializeComponent();
         }
 
@@ -28,12 +28,15 @@ namespace Reflex_Rehab{
         //}
 
         private void BtnStartGame_Click(object sender, EventArgs e){
-            this.Hide();
-            Poziom_Trudnosci poziom_Trudnosci = new Poziom_Trudnosci();
-            poziom_Trudnosci.Show();
+            panelMainMenuButtons.Hide();
+            panelDifficultySelectionMenu.Show();
         }
         private void BtnExit_Click(object sender, EventArgs e){
             Application.Exit();
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e) {
+
         }
     }
 }

@@ -16,7 +16,7 @@ namespace Reflex_Rehab
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Menu_Glowne());
+            Application.Run(new Ekran_Glowny());
         }
     }
 }

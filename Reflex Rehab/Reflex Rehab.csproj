@@ -52,16 +52,16 @@
     <Compile Include="Poziom_Trudnosci.Designer.cs">
       <DependentUpon>Poziom_Trudnosci.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu_Glowne.cs">
+    <Compile Include="Ekran_Glowny.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu_Glowne.Designer.cs">
-      <DependentUpon>Menu_Glowne.cs</DependentUpon>
+    <Compile Include="Ekran_Glowny.Designer.cs">
+      <DependentUpon>Ekran_Glowny.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Menu_Glowne.resx">
-      <DependentUpon>Menu_Glowne.cs</DependentUpon>
+    <EmbeddedResource Include="Ekran_Glowny.resx">
+      <DependentUpon>Ekran_Glowny.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Poziom_Trudnosci.resx">
       <DependentUpon>Poziom_Trudnosci.cs</DependentUpon>
