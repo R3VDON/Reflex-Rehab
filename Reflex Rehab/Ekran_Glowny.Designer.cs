@@ -1,5 +1,5 @@
-﻿namespace Reflex_Rehab{
-    partial class Ekran_Glowny{
+﻿namespace Reflex_Rehab {
+    partial class Ekran_Glowny {
         /// <summary>
         /// Wymagana zmienna projektanta.
         /// </summary>
@@ -9,8 +9,8 @@
         /// Wyczyść wszystkie używane zasoby.
         /// </summary>
         /// <param name="disposing">prawda, jeżeli zarządzane zasoby powinny zostać zlikwidowane; Fałsz w przeciwnym wypadku.</param>
-        protected override void Dispose(bool disposing){
-            if (disposing && (components != null)){
+        protected override void Dispose(bool disposing) {
+            if (disposing && (components != null)) {
                 components.Dispose();
             }
             base.Dispose(disposing);
@@ -22,7 +22,7 @@
         /// Metoda wymagana do obsługi projektanta — nie należy modyfikować
         /// jej zawartości w edytorze kodu.
         /// </summary>
-        private void InitializeComponent(){
+        private void InitializeComponent() {
             this.btnStartGame = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnHelp = new System.Windows.Forms.Button();
@@ -35,11 +35,9 @@
             this.panelDifficultySelectionMenu = new System.Windows.Forms.Panel();
             this.panelMainMenuButtons = new System.Windows.Forms.Panel();
             this.panelMainMenuHeader = new System.Windows.Forms.Panel();
-            this.panelGame = new System.Windows.Forms.Panel();
             this.panelMainMenu.SuspendLayout();
             this.panelDifficultySelectionMenu.SuspendLayout();
             this.panelMainMenuButtons.SuspendLayout();
-            this.panelMainMenuHeader.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnStartGame
@@ -199,19 +197,11 @@
             // panelMainMenuHeader
             // 
             this.panelMainMenuHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.panelMainMenuHeader.Controls.Add(this.panelGame);
             this.panelMainMenuHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMainMenuHeader.Location = new System.Drawing.Point(0, 0);
             this.panelMainMenuHeader.Name = "panelMainMenuHeader";
             this.panelMainMenuHeader.Size = new System.Drawing.Size(1264, 200);
             this.panelMainMenuHeader.TabIndex = 2;
-            // 
-            // panelGame
-            // 
-            this.panelGame.Location = new System.Drawing.Point(0, 0);
-            this.panelGame.Name = "panelGame";
-            this.panelGame.Size = new System.Drawing.Size(1264, 985);
-            this.panelGame.TabIndex = 3;
             // 
             // Ekran_Glowny
             // 
@@ -229,7 +219,6 @@
             this.panelMainMenu.ResumeLayout(false);
             this.panelDifficultySelectionMenu.ResumeLayout(false);
             this.panelMainMenuButtons.ResumeLayout(false);
-            this.panelMainMenuHeader.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -248,7 +237,6 @@
         private System.Windows.Forms.Panel panelMainMenuHeader;
         private System.Windows.Forms.Panel panelMainMenuButtons;
         private System.Windows.Forms.Panel panelDifficultySelectionMenu;
-        private System.Windows.Forms.Panel panelGame;
     }
 }
 
