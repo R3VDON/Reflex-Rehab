@@ -8,17 +8,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Reflex_Rehab
-{
-    public partial class levelEasy : Form
-    {
+namespace Reflex_Rehab {
+    public partial class levelEasy : Form {
         private Random random = new Random();
         private int score = 0;
-        private int timeLeft = 30;
+        private int timeLeft = 10;
         private Timer gameTimer = new Timer();
         private Button targetButton = new Button();
-        public levelEasy()
-        {
+        private Panel gamePanel = new Panel {
+            Location = new Point(0, 100),
+            Size = new System.Drawing.Size(1264, 885),
+            //BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))))
+        };
+        private Panel scoreTimePanel = new Panel {
+            Location = new Point(0, 0),
+            Size = new System.Drawing.Size(1264, 100),
+            BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))))
+        };
+        public levelEasy() {
             InitializeComponent();
             setupGame();
         }
@@ -37,27 +44,29 @@ namespace Reflex_Rehab
             gameTimer.Interval = 1000;
             gameTimer.Tick += gameTimer_Tick;
             gameTimer.Start();
+            this.Controls.Add(scoreTimePanel);
+            this.Controls.Add(gamePanel);
 
             // Etykieta wyniku
             Label scoreLabel = new Label {
                 Text = $"Wynik: {score}",
                 Location = new Point(10, 10),
                 AutoSize = true,
-                Font = new Font("Arial", 12, FontStyle.Bold)
+                Font = new Font("Microsoft Sans Serif", 14, FontStyle.Bold),
+                ForeColor = SystemColors.Control
             };
             scoreLabel.Name = "scoreLabel";
-            this.Controls.Add(scoreLabel);
-
+            scoreTimePanel.Controls.Add(scoreLabel);
             // Etykieta czasu
             Label timeLabel = new Label {
                 Text = $"Czas: {timeLeft}",
                 Location = new Point(10, 40),
                 AutoSize = true,
-                Font = new Font("Arial", 12, FontStyle.Bold)
+                Font = new Font("Microsoft Sans Serif", 14, FontStyle.Bold),
+                ForeColor = SystemColors.Control
             };
             timeLabel.Name = "timeLabel";
-            this.Controls.Add(timeLabel);
-
+            scoreTimePanel.Controls.Add(timeLabel);
             spawnTarget();
         }
 
@@ -65,7 +74,7 @@ namespace Reflex_Rehab
             int x = random.Next(this.ClientSize.Width - targetButton.Width);
             int y = random.Next(this.ClientSize.Height - targetButton.Height);
             targetButton.Location = new Point(x, y);
-            this.Controls.Add(targetButton);
+            gamePanel.Controls.Add(targetButton);
         }
 
         private void targetButton_Click(object sender, EventArgs e) {
@@ -76,7 +85,7 @@ namespace Reflex_Rehab
         }
 
         private void updateScore() {
-            var scoreLabel = this.Controls["scoreLabel"] as Label;
+            var scoreLabel = scoreTimePanel.Controls["scoreLabel"] as Label;
             if (scoreLabel != null) {
                 scoreLabel.Text = $"Wynik: {score}";
             }
@@ -84,22 +93,19 @@ namespace Reflex_Rehab
 
         private void gameTimer_Tick(object sender, EventArgs e) {
             timeLeft--;
-            var timeLabel = this.Controls["timeLabel"] as Label;
+            var timeLabel = scoreTimePanel.Controls["timeLabel"] as Label;
             if (timeLabel != null) {
                 timeLabel.Text = $"Czas: {timeLeft}";
             }
 
             if (timeLeft <= 0) {
                 gameTimer.Stop();
-                MessageBox.Show($"Game Over! Your score: {score}", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Koniec Gry! Twój wynik: {score}", "Koniec Gry", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
         }
 
-        private void levelEasy_Load(object sender, EventArgs e)
-        {
-
-        }
+        private void levelEasy_Load(object sender, EventArgs e){ }
 
         private void levelEasy_FormClosed(object sender, FormClosedEventArgs e) {
             Application.Exit();
