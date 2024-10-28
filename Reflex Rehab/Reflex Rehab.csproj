@@ -52,11 +52,11 @@
     <Compile Include="Poziom_Latwy.Designer.cs">
       <DependentUpon>Poziom_Latwy.cs</DependentUpon>
     </Compile>
-    <Compile Include="Poziom_Trudnosci.cs">
+    <Compile Include="levelEasy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Poziom_Trudnosci.Designer.cs">
-      <DependentUpon>Poziom_Trudnosci.cs</DependentUpon>
+    <Compile Include="levelEasy.Designer.cs">
+      <DependentUpon>levelEasy.cs</DependentUpon>
     </Compile>
     <Compile Include="Ekran_Glowny.cs">
       <SubType>Form</SubType>
@@ -72,8 +72,8 @@
     <EmbeddedResource Include="Poziom_Latwy.resx">
       <DependentUpon>Poziom_Latwy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Poziom_Trudnosci.resx">
-      <DependentUpon>Poziom_Trudnosci.cs</DependentUpon>
+    <EmbeddedResource Include="levelEasy.resx">
+      <DependentUpon>levelEasy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

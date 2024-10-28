@@ -10,22 +10,12 @@ using System.Windows.Forms;
 
 namespace Reflex_Rehab{
     public partial class Ekran_Glowny : Form{
-        private Button currentBtn;
-        private Button previousBtn;
-
+        
         public Ekran_Glowny(){
             InitializeComponent();
         }
 
         private void Menu_Glowne_Load(object sender, EventArgs e){
-
-        }
-
-        private void addUserControl(UserControl userControl) {
-            userControl.Dock = DockStyle.Fill;
-            panelGame.Controls.Clear();
-            panelGame.Controls.Add(userControl);
-            userControl.BringToFront();
 
         }
 
@@ -42,12 +32,8 @@ namespace Reflex_Rehab{
         }
 
         private void btnEasy_Click(object sender, EventArgs e) {
-            Poziom_Latwy poziom_Latwy = new Poziom_Latwy();
-            addUserControl(poziom_Latwy);
-            panelMainMenu.Hide();
-            panelMainMenuHeader.Hide();
-            panelMainMenuButtons.Hide();
-            panelDifficultySelectionMenu.Hide();
+            levelEasy poziom_Trudnosci = new levelEasy();
+            poziom_Trudnosci.Show();
         }
 
         private void btnBackToMainMenu_Click(object sender, EventArgs e) {
